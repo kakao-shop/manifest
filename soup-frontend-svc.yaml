@@ -1,0 +1,17 @@
+# soup-frontend-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: soup-frontend
+  labels:
+    type: frontend
+  namespace: ser-mgt
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: 3000
+    nodePort: 30080
+    protocol: TCP
+  selector:
+    type: frontend
