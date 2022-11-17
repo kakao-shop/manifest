@@ -1,3 +1,4 @@
+# soup-mysql-pv.yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -5,7 +6,7 @@ metadata:
   labels:
     type: rdb
 spec:
-  storageClassName: manual
+  storageClassName: local-storage
   capacity:
     storage: 10Gi
   accessModes:

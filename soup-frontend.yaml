@@ -1,9 +1,11 @@
+# soup-frontend-deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: soup-frontend
   labels:
     type: frontend
+  namespace: ser-mgt
 spec:
   replicas: 3
   selector:
@@ -17,7 +19,7 @@ spec:
         container.apparmor.security.beta.kubernetes.io/soup-frontend: unconfined
     spec:
       containers:
-        - image: aramu/soup-frontend:2.0
+        - image: aramu/soup-frontend:2.1
           name: soup-frontend
           env:
             - name: API_IP
@@ -31,19 +33,3 @@ spec:
         - name: tz-seoul
           hostPath:
             path: /usr/share/zoneinfo/Asia/Seoul
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: soup-frontend
-  labels:
-    type: frontend
-spec:
-  type: NodePort
-  ports:
-    - port: 3000
-      targetPort: 3000
-      nodePort: 30080
-      protocol: TCP
-  selector:
-    type: frontend

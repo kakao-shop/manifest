@@ -4,6 +4,7 @@ metadata:
   labels:
     type: inmemory
   name: soup-redis
+  namespace: ser-mgt
 spec:
   ports:
   - port: 6379

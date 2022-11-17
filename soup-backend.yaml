@@ -1,9 +1,11 @@
+# soup-backend-deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: soup-backend
   labels:
     type: backend
+  namespace: ser-mgt
 spec:
   selector:
     matchLabels:
@@ -18,13 +20,13 @@ spec:
     spec:
       containers:
         - name: soup-backend
-          image: 2214yj/soup-backend:1.0
+          image: 2214yj/soup-backend:2.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
           env:
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://soup-mysql:3306/soup?characterEncoding=UTF-8&serverTimezone=UTC
+              value: jdbc:mysql://soup-mysql:3306/soup?characterEncoding=UTF-8&s                                                                                                             erverTimezone=UTC
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
@@ -37,12 +39,6 @@ spec:
               value: '192.168.56.110'
             - name: ELASTICSEARCH_PORT
               value: '9200'
-            - name: jwt.access-token.expire-length
-              value: '3600000000'
-            - name: jwt.refresh-token.expire-length
-              value: '1209600000000'
-            - name: jwt.secret
-              value: secretkeyforjwtfromsoup
           volumeMounts:
             - name: tz-seoul
               mountPath: /etc/localtime
@@ -50,4 +46,3 @@ spec:
         - name: tz-seoul
           hostPath:
             path: /usr/share/zoneinfo/Asia/Seoul
-

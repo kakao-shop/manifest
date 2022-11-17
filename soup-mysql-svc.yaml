@@ -1,7 +1,9 @@
+# soup-mysql-svc.yaml
 apiVersion: v1
 kind: Service
 metadata:
   name: soup-mysql
+  namespace: ser-mgt
   labels:
     type: rdb
 spec:

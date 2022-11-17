@@ -1,9 +1,11 @@
+# soup-mysql-pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: soup-mysql-pvc
+  namespace: ser-mgt
 spec:
-  storageClassName: manual
+  storageClassName: local-storage
   accessModes:
   - ReadWriteMany
   resources:

@@ -1,9 +1,11 @@
+# soup-redis-pod.yaml
 apiVersion: v1
 kind: Pod
 metadata:
   labels:
     type: inmemory
   name: soup-redis
+  namespace: ser-mgt
 spec:
   containers:
   - image: redis:alpine3.16

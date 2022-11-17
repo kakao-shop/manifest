@@ -1,9 +1,11 @@
+# soup-mysql-deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     type: rdb
   name: soup-mysql
+  namespace: ser-mgt
 spec:
   replicas: 1
   selector:
