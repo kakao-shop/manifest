@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: soup-frontend
+  labels:
+    type: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
+  template:
+    metadata:
+      labels:
+        type: frontend
+      annotations:
+        container.apparmor.security.beta.kubernetes.io/soup-frontend: unconfined
+    spec:
+      containers:
+        - image: aramu/soup-frontend:2.0
+          name: soup-frontend
+          env:
+            - name: API_IP
+              value: soup-backend
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: tz-seoul
+              mountPath: /etc/localtime
+      volumes:
+        - name: tz-seoul
+          hostPath:
+            path: /usr/share/zoneinfo/Asia/Seoul
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: soup-frontend
+  labels:
+    type: frontend
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30080
+      protocol: TCP
+  selector:
+    type: frontend
