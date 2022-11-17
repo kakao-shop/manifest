@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: soup-mysql-pv
+  labels:
+    type: rdb
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  hostPath:
+    path: "/soup-mysql-storage/"
