@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    type: inmemory
+  name: soup-redis
+spec:
+  containers:
+  - image: redis:alpine3.16
+    name: soup-redis
+    ports:
+    - containerPort: 6379
