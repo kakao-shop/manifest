@@ -30,6 +30,11 @@ spec:
           volumeMounts:
             - name: tz-seoul
               mountPath: /etc/localtime
+          resources:
+            requests:
+              cpu: "150m"
+            limits:
+              cpu: "250m"
       volumes:
         - name: tz-seoul
           hostPath:
