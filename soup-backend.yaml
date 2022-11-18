@@ -45,8 +45,6 @@ spec:
           resources:
             requests:
               cpu: "3m"
-            limits:
-              cpu: "15m"
       volumes:
         - name: tz-seoul
           hostPath:
