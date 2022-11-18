@@ -44,9 +44,9 @@ spec:
               mountPath: /etc/localtime
           resources:
             requests:
-              cpu: "250m"
-            limits:
               cpu: "500m"
+            limits:
+              cpu: "1Gi"
       volumes:
         - name: tz-seoul
           hostPath:
