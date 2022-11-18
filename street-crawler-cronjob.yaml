@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: street-crawler
+  namespace: data-mgt
 spec:
   schedule: "*/30 * * * *" # 1
   jobTemplate:

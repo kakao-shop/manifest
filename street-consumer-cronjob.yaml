@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: street-consumer
+  namespace: data-mgt
 spec:
   schedule: "20,50 * * * *" # 1
   jobTemplate:
