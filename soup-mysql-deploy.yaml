@@ -7,6 +7,7 @@ metadata:
   name: soup-mysql
   namespace: ser-mgt
 spec:
+  revisionHistoryLimit: 2
   replicas: 1
   selector:
     matchLabels:
