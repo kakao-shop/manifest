@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: soup-backend
-          image: 2214yj/soup-backend:2.1
+          image: 2214yj/soup-backend:2.3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
