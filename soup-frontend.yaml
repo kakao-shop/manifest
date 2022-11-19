@@ -20,7 +20,7 @@ spec:
         container.apparmor.security.beta.kubernetes.io/soup-frontend: unconfined
     spec:
       containers:
-        - image: aramu/soup-frontend:2.1
+        - image: aramu/soup-frontend:2.2
           name: soup-frontend
           env:
             - name: API_IP

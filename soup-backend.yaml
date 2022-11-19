@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: soup-backend
-          image: 2214yj/soup-backend:2.3
+          image: 2214yj/soup-backend:2.4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
