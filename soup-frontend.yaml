@@ -20,11 +20,15 @@ spec:
         container.apparmor.security.beta.kubernetes.io/soup-frontend: unconfined
     spec:
       containers:
-        - image: aramu/soup-frontend:2.2
+        - image: aramu/soup-frontend:2.3
           name: soup-frontend
           env:
-            - name: API_IP
-              value: soup-backend
+            - name: MEMBER_URI
+              value: soup-member-service:8002
+            - name: ADMIN_URI
+              value: soup-admin-service:8001
+            - name: SEARCH_URI
+              value: soup-search-service:8000
           ports:
             - containerPort: 3000
           volumeMounts:
