@@ -27,7 +27,7 @@ spec:
             - containerPort: 8000
           env:
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://soup-mysql:3306/soup?serverTimezone=Asia/Seoul&createDatabaseIfNotExist=true                                                                                               erverTimezone=UTC
+              value: jdbc:mysql://soup-mysql:3306/soup?serverTimezone=Asia/Seoul&createDatabaseIfNotExist=TRUE                                                                                                  erverTimezone=UTC
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
