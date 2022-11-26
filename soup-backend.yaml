@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: soup-backend
-          image: 2214yj/soup-backend:2.4
+        image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-backend:464116f253bdfcf0a273630b60a56e8c9a043aed
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
