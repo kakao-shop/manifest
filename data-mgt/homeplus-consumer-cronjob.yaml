@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: home-consumer
-            image: aam411/k8shomeconsumer:4.0
+            image: aam411/k8shomeconsumer:4.1
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT
