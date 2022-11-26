@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: street-consumer
-            image: aam411/k8sstreetconsumer:3.1
+            image: aam411/k8sstreetconsumer:4.0
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT
