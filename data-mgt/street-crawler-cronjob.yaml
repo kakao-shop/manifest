@@ -13,4 +13,7 @@ spec:
           - name: street-crawler
             image: aam411/k8sstreetcrawler:2.0
             imagePullPolicy: IfNotPresent
+            envFrom:
+              - configMapRef:
+                name: kafka-host-port
           restartPolicy: Never

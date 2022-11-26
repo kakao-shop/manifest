@@ -13,4 +13,7 @@ spec:
           - name: kakao-crawler
             image: aam411/k8skakaocrawler:2.0
             imagePullPolicy: IfNotPresent
+            envFrom:
+              - configMapRef:
+                name: kafka-host-port
           restartPolicy: Never
