@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: street-crawler
-            image: aam411/k8sstreetcrawler:2.0
+            image: aam411/k8sstreetcrawler:4.0
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT

@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: home-crawler
-            image: aam411/k8shomecrawler:2.1
+            image: aam411/k8shomecrawler:4.0
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT
