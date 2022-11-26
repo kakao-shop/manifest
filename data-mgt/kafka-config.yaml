@@ -5,5 +5,5 @@ metadata:
   namespace: default
 data:
   KAFKA_PORT: 9092
-  KAFKA_HOST: my-cluster-kafka-0.data-mgt.svc.cluster.local
+  KAFKA_HOST: 'my-cluster-kafka-0.data-mgt.svc.cluster.local'
  
