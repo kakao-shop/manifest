@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: kakao-crawler
-            image: aam411/k8skakaocrawler:4.1
+            image: aam411/k8skakaocrawler:4.2
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT
