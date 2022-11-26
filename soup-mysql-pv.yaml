@@ -7,10 +7,13 @@ metadata:
     type: rdb
   namespace: ser-mgt
 spec:
-  storageClassName: local-storage
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-0b582f4111a1af698
   capacity:
     storage: 10Gi
   accessModes:
   - ReadWriteMany
-  hostPath:
-    path: "/soup-mysql-storage/"
+  volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Retain

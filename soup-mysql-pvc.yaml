@@ -5,7 +5,7 @@ metadata:
   name: soup-mysql-pvc
   namespace: ser-mgt
 spec:
-  storageClassName: local-storage
+  storageClassName: efs-sc
   accessModes:
   - ReadWriteMany
   resources:
