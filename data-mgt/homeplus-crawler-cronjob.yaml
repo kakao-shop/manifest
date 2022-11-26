@@ -13,7 +13,15 @@ spec:
           - name: home-crawler
             image: aam411/k8shomecrawler:2.1
             imagePullPolicy: IfNotPresent
-            envFrom:
-            - configMapRef:
-              name: kafka-host-port
+            env:
+            - name: KAFKA_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: KAFKA_PORT
+            - name: KAFKA_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: KAFKA_HOST
           restartPolicy: Never
