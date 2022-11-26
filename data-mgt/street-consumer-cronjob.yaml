@@ -17,21 +17,21 @@ spec:
             - name: KAFKA_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: KAFKA_PORT
             - name: KAFKA_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: KAFKA_HOST
             - name: ELASTICSEARCH_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: ELASTICSEARCH_HOST
             - name: ELASTICSEARCH_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: ELASTICSEARCH_PORT
           restartPolicy: Never

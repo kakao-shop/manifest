@@ -17,11 +17,11 @@ spec:
             - name: KAFKA_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: KAFKA_PORT
             - name: KAFKA_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: kafka-host-port
+                  name: kafka-config
                   key: KAFKA_HOST
           restartPolicy: Never
