@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: kakao-consumer
-            image: aam411/k8skakaoconsumer:3.0
+            image: aam411/k8skakaoconsumer:4.0
             imagePullPolicy: IfNotPresent
             env:
             - name: KAFKA_PORT
