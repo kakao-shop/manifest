@@ -13,4 +13,25 @@ spec:
           - name: street-consumer
             image: aam411/k8sstreetconsumer:3.1
             imagePullPolicy: IfNotPresent
+            env:
+            - name: KAFKA_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: KAFKA_PORT
+            - name: KAFKA_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: KAFKA_HOST
+            - name: ELASTICSEARCH_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: ELASTICSEARCH_HOST
+            - name: ELASTICSEARCH_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: kafka-host-port
+                  key: ELASTICSEARCH_PORT
           restartPolicy: Never
