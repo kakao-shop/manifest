@@ -37,7 +37,7 @@ spec:
             - name: SPRING_REDIS_PORT
               value: '6379'
             - name: ELASTICSEARCH_HOST
-              value: '192.168.56.110'
+              value: '172.31.7.142'
             - name: ELASTICSEARCH_PORT
               value: '9200'
           volumeMounts:
