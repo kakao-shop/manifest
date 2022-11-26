@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: kakao-consumer
+spec:
+  schedule: "20,50 * * * *" # 1
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 10
+      template:
+        spec:
+          containers:
+          - name: kakao-consumer
+            image: aam411/k8skakaoconsumer:3.0
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
