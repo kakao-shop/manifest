@@ -27,30 +27,30 @@ spec:
             - containerPort: 8000
           env:
             - name: SPRING_DATASOURCE_URL
-                valueFrom:
-                  configMapKeyRef:
-                    name: soup-backend-config
-                    key: SPRING_DATASOURCE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: soup-backend-config
+                  key: SPRING_DATASOURCE_URL
             - name: SPRING_DATASOURCE_USERNAME
-                valueFrom:
-                  secretKeyRef:
-                    name: soup-backend-secret
-                    key: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: soup-backend-secret
+                  key: SPRING_DATASOURCE_USERNAME
             - name: SPRING_DATASOURCE_PASSWORD
-                valueFrom:
-                  secretKeyRef:
-                    name: soup-backend-secret
-                    key: SPRING_DATASOURCE_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: soup-backend-secret
+                  key: SPRING_DATASOURCE_PASS
             - name: ELASTICSEARCH_HOST
-                valueFrom:
-                  configMapKeyRef:
-                    name: soup-backend-config
-                    key: ELASTICSEARCH_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: soup-backend-config
+                  key: ELASTICSEARCH_HOST
             - name: ELASTICSEARCH_PORT
-                valueFrom:
-                  configMapKeyRef:
-                    name: soup-backend-config
-                    key: ELASTICSEARCH_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: soup-backend-config
+                  key: ELASTICSEARCH_PORT
           volumeMounts:
             - name: tz-seoul
               mountPath: /etc/localtime
