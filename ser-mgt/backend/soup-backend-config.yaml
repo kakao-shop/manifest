@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: soup-backend-config
+  namespace: ser-mgt
+data:
+  SPRING_DATASOURCE_URL: jdbc:mysql://soup-mysql:3306/soup?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+  SPRING_REDIS_HOST: soup-redis
+  SPRING_REDIS_PORT: '6379'
+  ELASTICSEARCH_HOST: '172.31.7.142'
+  ELASTICSEARCH_PORT: '9200'

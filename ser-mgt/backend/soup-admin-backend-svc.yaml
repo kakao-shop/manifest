@@ -1,0 +1,15 @@
+# soup-admin-backend-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: soup-admin-backend
+  labels:
+    type: admin-backend
+  namespace: ser-mgt
+spec:
+  selector:
+    type: admin-backend
+  ports:
+    - protocol: 'TCP'
+      port: 8001
+      targetPort: 8001
