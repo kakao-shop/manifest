@@ -40,7 +40,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: soup-backend-secret
-                  key: SPRING_DATASOURCE_PASS
+                  key: SPRING_DATASOURCE_PASSWORD
             - name: ELASTICSEARCH_HOST
               valueFrom:
                 configMapKeyRef:

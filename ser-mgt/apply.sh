@@ -12,6 +12,9 @@ kubectl apply -f soup-redis.yaml
 kubectl apply -f soup-redis-svc.yaml
 
 cd ../backend
+kubectl apply -f soup-backend-config.yaml
+kubectl apply -f soup-backend-secret.yaml
+
 kubectl apply -f soup-admin-backend-svc.yaml
 kubectl apply -f soup-admin-backend.yaml
 
