@@ -1,0 +1,15 @@
+# soup-member-backend-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: soup-member-backend
+  labels:
+    type: member-backend
+  namespace: ser-mgt
+spec:
+  selector:
+    type: member-backend
+  ports:
+    - protocol: 'TCP'
+      port: 8002
+      targetPort: 8002

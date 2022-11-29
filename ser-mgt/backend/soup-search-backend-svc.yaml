@@ -1,14 +1,14 @@
-# soup-backend-svc.yaml
+# soup-search-backend-svc.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: soup-backend
+  name: soup-search-backend
   labels:
-    type: backend
+    type: search-backend
   namespace: ser-mgt
 spec:
   selector:
-    type: backend
+    type: search-backend
   ports:
     - protocol: 'TCP'
       port: 8000

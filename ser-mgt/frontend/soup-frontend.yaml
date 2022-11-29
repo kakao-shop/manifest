@@ -24,9 +24,9 @@ spec:
           name: soup-frontend
           env:
             - name: MEMBER_URI
-              value: soup-backend:8000
+              value: soup-backend:8002
             - name: ADMIN_URI
-              value: soup-backend:8000
+              value: soup-backend:8001
             - name: SEARCH_URI
               value: soup-backend:8000
           ports:
