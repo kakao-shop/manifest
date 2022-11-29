@@ -24,11 +24,11 @@ spec:
           name: soup-frontend
           env:
             - name: MEMBER_URI
-              value: soup-backend:8002
+              value: soup-member-backend:8002
             - name: ADMIN_URI
-              value: soup-backend:8001
+              value: soup-admin-backend:8001
             - name: SEARCH_URI
-              value: soup-backend:8000
+              value: soup-search-backend:8000
           ports:
             - containerPort: 3000
           volumeMounts:
