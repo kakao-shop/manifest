@@ -22,21 +22,21 @@ spec:
       nodeSelector:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
-        image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:86cf01c7fbe81efc636bfcd24310ca818950a3bd
-        name: soup-frontend
-        env:
-          - name: MEMBER_URI
-            value: soup-member-backend:8002
-          - name: ADMIN_URI
-            value: soup-admin-backend:8001
-          - name: SEARCH_URI
-            value: soup-search-backend:8000
-        ports:
-          - containerPort: 3000
-        volumeMounts:
-          - name: tz-seoul
-            mountPath: /etc/localtime
-    volumes:
-      - name: tz-seoul
-        hostPath:
-          path: /usr/share/zoneinfo/Asia/Seoul
+        - image: aramu/soup-frontend:2.3
+          name: soup-frontend
+          env:
+            - name: MEMBER_URI
+              value: soup-member-backend:8002
+            - name: ADMIN_URI
+              value: soup-admin-backend:8001
+            - name: SEARCH_URI
+              value: soup-search-backend:8000
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: tz-seoul
+              mountPath: /etc/localtime
+      volumes:
+        - name: tz-seoul
+          hostPath:
+            path: /usr/share/zoneinfo/Asia/Seoul
