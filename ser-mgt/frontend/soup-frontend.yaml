@@ -20,7 +20,7 @@ spec:
         container.apparmor.security.beta.kubernetes.io/soup-frontend: unconfined
     spec:
       containers:
-          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:fddfa48dc0fa6bbddb016c3e7a0ffa9617e0f82a
+         image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:fd3ad42f9f78cf73a44c3ff681e5240111c3da72
           name: soup-frontend
           env:
             - name: MEMBER_URI
