@@ -19,6 +19,8 @@ spec:
       labels:
         type: rdb
     spec:
+      nodeSelector:
+        eks/nodegroup-name: ng1-soup-cluster1
       containers:
       - image: mysql:5.7-debian
         name: soup-mysql
