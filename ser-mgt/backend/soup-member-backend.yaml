@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: soup-member-backend
-          image: 2214yj/soup-member-service:2.0
+          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-backend:e6a8bb460efb3e7f7fa7d693024a57666c0ec5c4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8002
