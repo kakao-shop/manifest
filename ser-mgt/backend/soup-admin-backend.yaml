@@ -19,6 +19,8 @@ spec:
       labels:
         type: admin-backend
     spec:
+      nodeSelector:
+        eks/nodegroup-name: ng1-soup-cluster1
       containers:
         - name: soup-admin-backend
           image: 2214yj/soup-admin-service:2.0
