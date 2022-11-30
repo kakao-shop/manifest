@@ -7,7 +7,7 @@ metadata:
     type: frontend
   namespace: ser-mgt
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 3000
       targetPort: 3000

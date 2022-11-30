@@ -20,7 +20,7 @@ spec:
         type: rdb
     spec:
       containers:
-      - image: mysql:5.7-debian
+      - image: mysql:8.0
         name: soup-mysql
         args:
         - --character-set-client-handshake=false
@@ -36,15 +36,3 @@ spec:
           value: '%'
         ports:
         - containerPort: 3306
-        volumeMounts:
-        - name: tz-seoul
-          mountPath: /etc/localtime
-        - name: soup-mysql-storage
-          mountPath: /var/lib/mysql
-      volumes:
-      - name: tz-seoul
-        hostPath:
-          path: /usr/share/zoneinfo/Asia/Seoul
-      - name: soup-mysql-storage
-        persistentVolumeClaim:
-          claimName: soup-mysql-pvc
