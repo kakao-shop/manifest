@@ -2,11 +2,6 @@
 kubectl create ns ser-mgt
 
 cd db
-kubectl apply -f soup-mysql-pv.yaml
-kubectl apply -f soup-mysql-pvc.yaml
-
-kubectl apply -f soup-mysql-svc.yaml
-kubectl apply -f soup-mysql-deploy.yaml
 
 kubectl apply -f soup-redis.yaml
 kubectl apply -f soup-redis-svc.yaml
