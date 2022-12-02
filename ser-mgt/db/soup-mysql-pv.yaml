@@ -11,8 +11,8 @@ spec:
     driver: efs.csi.aws.com
     volumeHandle: fs-070eb07fc59240a9e
   capacity:
-    storage: 5Gi
+    storage: 10Gi
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   volumeMode: Filesystem
   persistentVolumeReclaimPolicy: Retain
