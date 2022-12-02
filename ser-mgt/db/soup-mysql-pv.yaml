@@ -9,7 +9,7 @@ spec:
   storageClassName: efs-sc
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-02c9c5a3820447f1e
+    volumeHandle: fs-070eb07fc59240a9e
   capacity:
     storage: 10Gi
   accessModes:
