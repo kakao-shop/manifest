@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: soup-mysql-pv
+  labels:
+    type: rdb
+  namespace: ser-mgt
+spec:
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-02c9c5a3820447f1e
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Retain
