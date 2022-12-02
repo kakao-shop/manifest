@@ -13,6 +13,6 @@ spec:
   capacity:
     storage: 10Gi
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Delete
