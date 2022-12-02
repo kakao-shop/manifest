@@ -56,7 +56,12 @@ spec:
           volumeMounts:
             - name: tz-seoul
               mountPath: /etc/localtime
+            - name: logging
+              mountPath: /var/log/containers
       volumes:
         - name: tz-seoul
           hostPath:
             path: /usr/share/zoneinfo/Asia/Seoul
+        - name: logging
+          hostPath:
+            path: /var/log/containers
