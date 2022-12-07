@@ -7,7 +7,7 @@ metadata:
     type: admin-backend
   namespace: ser-mgt
 spec:
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 0
   selector:
     matchLabels:
       type: admin-backend
