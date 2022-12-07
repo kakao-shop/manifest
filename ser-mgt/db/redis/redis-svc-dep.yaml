@@ -10,10 +10,5 @@ spec:
     targetPort: 6379
     name: client
     nodePort: 30007
-  - protocol: TCP
-    port: 16379
-    targetPort: 16379
-    name: gossip
-    nodePort: 30008
   selector:
     app: redis-cluster

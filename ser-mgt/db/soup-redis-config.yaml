@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+  namespace: ser-mgt
+data:
+  redis-config: |
+    logfile /redis-master-data/redis.log
+#    daemonize yes
+#    logfile /redis-master-data/redis.log
+#    log-dir "/redis-master-data/log/"
+#    maxmemory 2mb
+#    maxmemory-policy allkeys-lru
+#    log-dir "/redis/log"
+#    data-dir "/redis/data/"

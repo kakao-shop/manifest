@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis-cluster
+spec:
+  serviceName: redis-cluster
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-cluster
+  template:
+    metadata:
+      labels:
+        app: redis-cluster
+    spec:
+      containers:
+        - name: redis
+          image: redis:5.0.1-alpine
+          ports:
+            - containerPort: 6379
+              name: client
+          command: ["redis-server"]
+          env:
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+           # 컨테이너 상의 파일 시스템에 퍼시스트 볼륨을 마운트할 위치를 지정
+          volumeMounts:
+            - name: conf
+              mountPath: /conf
+              readOnly: false
+            - name: data
+              mountPath: /data
+              readOnly: false
+
+      # redis-cluster라는 configmap을 container의 /conf에 마운트
+      volumes:
+        - name: conf
+          configMap:
+            name: redis-cluster
+            defaultMode: 0755
+
+  # 레플리카 수만큼 볼륨 요구를 작성
+  # 스테이트풀셋은 퍼시스트 볼륨과 파드를 함께 조합하여 제어한다.
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi
