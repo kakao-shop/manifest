@@ -6,6 +6,6 @@ metadata:
 data:
   KAFKA_PORT: '9092'
   KAFKA_HOST: 'my-cluster-kafka-0.my-cluster-kafka-brokers.data-mgt.svc'
-  ELASTICSEARCH_HOST: 'a71fa846b45864e3aa708a894cbe9338-203128187.ap-northeast-2.elb.amazonaws.com'
-  ELASTICSEARCH_PORT: '80'
+  ELASTICSEARCH_HOST: 'es.es.svc.cluster.local'
+  ELASTICSEARCH_PORT: '9200'
  
