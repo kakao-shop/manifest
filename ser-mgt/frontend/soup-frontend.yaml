@@ -8,7 +8,7 @@ metadata:
   namespace: ser-mgt
 spec:
   revisionHistoryLimit: 0
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       type: frontend
