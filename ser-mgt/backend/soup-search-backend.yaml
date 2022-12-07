@@ -23,7 +23,7 @@ spec:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
         - name: soup-search-backend
-          image: 2214yj/soup-search-service-no-log
+          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-search-backend:8ac42748a81432c89899849beaee35ad2b6e10d8
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
