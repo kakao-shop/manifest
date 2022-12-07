@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       type: admin-backend
-  replicas: 3
+  replicas: 2
   strategy:
     type: Recreate
   template:
