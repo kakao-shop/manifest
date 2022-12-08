@@ -22,7 +22,7 @@ spec:
       nodeSelector:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
-        - image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:4dc1bec0f5bde827542bcd026b18f4ce877239bd
+        - image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:2c1913b17eb3161e458a0dd8bd4a0bfc83d0aac6
           name: soup-frontend
           env:
             - name: MEMBER_URI
