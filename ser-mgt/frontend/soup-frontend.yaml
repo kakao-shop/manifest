@@ -36,7 +36,13 @@ spec:
           volumeMounts:
             - name: tz-seoul
               mountPath: /etc/localtime
+            - name: nginx-log
+              mountPath: /var/log/nginx
       volumes:
         - name: tz-seoul
           hostPath:
             path: /usr/share/zoneinfo/Asia/Seoul
+        - name: nginx-log
+          hostPath:
+            path: /var/lib/docker/containers
+
