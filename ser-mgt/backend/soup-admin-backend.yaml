@@ -23,7 +23,7 @@ spec:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
         - name: soup-admin-backend
-          image: 2214yj/soup-admin-service-no-log
+          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-admin-backend:122e61b1ace883c2ebc37c840f757737061ba01c
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8001
