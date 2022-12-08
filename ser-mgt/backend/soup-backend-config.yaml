@@ -4,7 +4,7 @@ metadata:
   name: soup-backend-config
   namespace: ser-mgt
 data:
-  SPRING_DATASOURCE_URL: jdbc:mysql://dbcluster.mysql-operator.svc.cluster.local:3306/soup?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+  SPRING_DATASOURCE_URL: jdbc:mysql://dbcluster.mysql-operator.svc.cluster.local:3306/soup?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&createDatabaseIfNotExist=true
   SPRING_REDIS_HOST: soup-redis
   SPRING_REDIS_PORT: '6379'
   ELASTICSEARCH_HOST: es.es.svc.cluster.local
