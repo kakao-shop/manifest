@@ -7,8 +7,8 @@ metadata:
     type: frontend
   namespace: ser-mgt
 spec:
-  revisionHistoryLimit: 2
-  replicas: 3
+  revisionHistoryLimit: 0
+  replicas: 2
   selector:
     matchLabels:
       type: frontend
@@ -22,7 +22,7 @@ spec:
       nodeSelector:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
-        - image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:61fce223b48343331b614b02e2fda100bc8d4355
+        - image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-frontend:9d91a80e0c6db2b7e63e25003f7459e075aa42f5
           name: soup-frontend
           env:
             - name: MEMBER_URI

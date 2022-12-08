@@ -7,11 +7,11 @@ metadata:
     type: search-backend
   namespace: ser-mgt
 spec:
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 0
   selector:
     matchLabels:
       type: search-backend
-  replicas: 3
+  replicas: 2
   strategy:
     type: Recreate
   template:
@@ -23,7 +23,7 @@ spec:
         eks/nodegroup-name: ng1-soup-cluster1
       containers:
         - name: soup-search-backend
-          image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-search-backend:60b964c83437cddc7c357daec8991622a3108c48
+          image: 2214yj/soup-search-service-no-log
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
