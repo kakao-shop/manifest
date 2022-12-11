@@ -27,7 +27,7 @@ spec:
           imagePullPolicy: IfNotPresent
           readinessProbe:
             tcpSocket:
-              port: 8083
+              port: 8000
               initialDelaySeconds: 5
               periodSeconds: 5
           resources:
