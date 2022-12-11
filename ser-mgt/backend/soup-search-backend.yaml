@@ -29,7 +29,7 @@ spec:
             requests:
               cpu: "250m"
             limits:
-              cpu: "400m"
+              cpu: "500m"
           ports:
             - containerPort: 8000
           env:
