@@ -26,9 +26,9 @@ spec:
           image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-search-backend:a2fccd37f3145f7953fde4a79beeadf83e72b447
           resources:
             requests:
-              cpu: "500m"
+              cpu: "300m"
             limits:
-              cpu: "1500m"
+              cpu: "500m"
           ports:
             - containerPort: 8000
           env:
