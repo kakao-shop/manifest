@@ -25,11 +25,15 @@ spec:
         - name: soup-search-backend
           image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-search-backend:142b6aaea34e714844f752beecd18e022a58bf9d
           imagePullPolicy: IfNotPresent
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: 8000
           resources:
             requests:
               cpu: "250m"
             limits:
-              cpu: "500m"
+              cpu: "1500m"
           ports:
             - containerPort: 8000
           env:
