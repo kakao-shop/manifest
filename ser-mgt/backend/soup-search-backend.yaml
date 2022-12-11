@@ -25,11 +25,6 @@ spec:
         - name: soup-search-backend
           image: 664966433367.dkr.ecr.ap-northeast-2.amazonaws.com/soup-search-backend:142b6aaea34e714844f752beecd18e022a58bf9d
           imagePullPolicy: IfNotPresent
-          readinessProbe:
-            tcpSocket:
-              port: 8080
-              initialDelaySeconds: 5
-              periodSeconds: 5
           resources:
             requests:
               cpu: "250m"
