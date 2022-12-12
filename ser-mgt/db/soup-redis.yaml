@@ -23,8 +23,6 @@ spec:
       name: data
     - mountPath: /redis-master
       name: config
-    - name: nginx-log
-      mountPath: /redis-master-data/redis.log
   volumes:
     - name: data
       emptyDir: {}
@@ -34,5 +32,3 @@ spec:
         items:
         - key: redis-config
           path: redis.conf
-    
-  
